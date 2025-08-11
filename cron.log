@@ -1,0 +1,557 @@
+  2025-06-23 16:28:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-06-23 16:28:01 App\Jobs\ProcessProductImport .............. 8.57ms FAIL
+  2025-06-23 16:29:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-23 16:29:32 App\Jobs\ZaraXmlImport ........................ 29s DONE
+  2025-06-23 16:30:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-23 16:30:02 App\Jobs\ZaraXmlImport ................... 126.55ms FAIL
+  2025-06-23 21:05:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-23 21:05:02 App\Jobs\ZaraXmlImport .................... 38.88ms FAIL
+  2025-06-23 21:14:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-23 21:14:02 App\Jobs\ZaraXmlImport .................... 13.61ms FAIL
+  2025-06-23 21:25:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-23 21:25:01 App\Jobs\ZaraXmlImport .................... 17.42ms FAIL
+  2025-06-24 01:01:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-06-24 01:01:02 App\Jobs\ProcessProductImport .............. 6.11ms FAIL
+  2025-06-24 13:06:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 13:08:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 13:08:02 App\Jobs\ZaraXmlImport .................... 12.52ms FAIL
+  2025-06-24 14:06:58 App\Jobs\ZaraXmlImport ..................... 1h 55s DONE
+  2025-06-24 14:23:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 14:23:20 App\Jobs\ZaraXmlImport ........................ 17s DONE
+  2025-06-24 14:27:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 14:29:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 14:29:01 App\Jobs\ZaraXmlImport ..................... 7.70ms FAIL
+  2025-06-24 14:29:11 App\Jobs\ZaraXmlImport ...................... 2m 9s DONE
+  2025-06-24 19:35:03 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 19:37:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 19:37:02 App\Jobs\ZaraXmlImport ..................... 6.04ms FAIL
+  2025-06-24 19:37:25 App\Jobs\ZaraXmlImport ..................... 2m 22s DONE
+  2025-06-24 19:47:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 19:47:22 App\Jobs\ZaraXmlImport ........................ 20s DONE
+  2025-06-24 21:44:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 21:44:40 App\Jobs\ZaraXmlImport ........................ 38s DONE
+  2025-06-24 23:27:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-24 23:28:47 App\Jobs\ZaraXmlImport ..................... 1m 45s DONE
+  2025-06-25 15:56:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 15:58:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 15:58:02 App\Jobs\ZaraXmlImport .................... 15.32ms FAIL
+  2025-06-25 16:03:36 App\Jobs\ZaraXmlImport ..................... 7m 34s DONE
+  2025-06-25 16:31:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 16:33:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 16:33:02 App\Jobs\ZaraXmlImport .................... 11.00ms FAIL
+  2025-06-25 16:37:03 App\Jobs\ZaraXmlImport ...................... 6m 1s DONE
+  2025-06-25 17:28:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 17:28:37 App\Jobs\ZaraXmlImport ........................ 35s DONE
+  2025-06-25 17:45:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 17:45:02 App\Jobs\ZaraXmlImport .................... 25.15ms DONE
+  2025-06-25 17:48:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 17:48:02 App\Jobs\ZaraXmlImport .................... 13.63ms DONE
+  2025-06-25 18:01:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 18:01:02 App\Jobs\ZaraXmlImport .................... 23.92ms DONE
+  2025-06-25 18:25:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 18:25:23 App\Jobs\ZaraXmlImport ........................ 21s DONE
+  2025-06-25 19:47:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 19:47:11 App\Jobs\ZaraXmlImport ......................... 9s DONE
+  2025-06-25 19:52:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-25 19:53:26 App\Jobs\ZaraXmlImport ..................... 1m 24s DONE
+  2025-06-26 01:15:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-26 01:16:14 App\Jobs\ZaraXmlImport ..................... 1m 12s DONE
+  2025-06-26 17:33:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-26 17:33:21 App\Jobs\ZaraXmlImport ........................ 19s DONE
+  2025-06-27 00:53:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-27 00:54:23 App\Jobs\ZaraXmlImport ..................... 1m 21s DONE
+  2025-06-27 02:05:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-27 02:05:02 App\Jobs\ZaraXmlImport .................... 16.35ms FAIL
+  2025-06-27 14:55:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-27 14:57:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-27 14:57:02 App\Jobs\ZaraXmlImport ..................... 6.89ms FAIL
+  2025-06-27 14:58:05 App\Jobs\ZaraXmlImport ...................... 3m 3s DONE
+  2025-06-27 20:05:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-27 20:05:30 App\Jobs\ZaraXmlImport ........................ 28s DONE
+  2025-06-27 21:47:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-27 21:48:30 App\Jobs\ZaraXmlImport ..................... 1m 28s DONE
+  2025-06-28 03:30:03 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-28 03:30:34 App\Jobs\ZaraXmlImport ........................ 31s DONE
+  2025-06-28 14:59:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-06-28 14:59:02 App\Jobs\ProcessProductImport .............. 9.78ms DONE
+  2025-06-28 16:00:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-28 16:00:49 App\Jobs\ZaraXmlImport ........................ 47s DONE
+  2025-06-28 21:59:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-28 21:59:46 App\Jobs\ZaraXmlImport ........................ 43s DONE
+  2025-06-28 23:50:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-28 23:50:16 App\Jobs\ZaraXmlImport ........................ 14s DONE
+  2025-06-29 00:49:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 00:49:47 App\Jobs\ZaraXmlImport ........................ 44s DONE
+  2025-06-29 14:53:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 14:53:47 App\Jobs\ZaraXmlImport ........................ 44s DONE
+  2025-06-29 16:08:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 16:10:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 16:10:02 App\Jobs\ZaraXmlImport ..................... 9.46ms FAIL
+  2025-06-29 16:11:39 App\Jobs\ZaraXmlImport ..................... 3m 36s DONE
+  2025-06-29 16:49:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 16:49:11 App\Jobs\ZaraXmlImport ......................... 9s DONE
+  2025-06-29 18:17:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 18:17:07 App\Jobs\ZaraXmlImport ......................... 4s DONE
+  2025-06-29 19:38:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 19:38:45 App\Jobs\ZaraXmlImport ........................ 42s DONE
+  2025-06-29 21:30:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 21:30:04 App\Jobs\ZaraXmlImport ......................... 2s DONE
+  2025-06-29 22:01:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 22:01:09 App\Jobs\ZaraXmlImport ......................... 7s DONE
+  2025-06-29 23:08:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 23:09:01 App\Jobs\ZaraXmlImport ........................ 59s DONE
+  2025-06-29 23:54:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-29 23:55:00 App\Jobs\ZaraXmlImport ........................ 58s DONE
+  2025-06-30 00:33:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 00:33:20 App\Jobs\ZaraXmlImport ........................ 18s DONE
+  2025-06-30 01:15:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 01:15:35 App\Jobs\ZaraXmlImport ........................ 33s DONE
+  2025-06-30 01:58:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 01:59:13 App\Jobs\ZaraXmlImport ..................... 1m 11s DONE
+  2025-06-30 10:53:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 10:54:00 App\Jobs\ZaraXmlImport ........................ 57s DONE
+  2025-06-30 12:16:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 12:16:09 App\Jobs\ZaraXmlImport ......................... 8s DONE
+  2025-06-30 12:51:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 12:51:12 App\Jobs\ZaraXmlImport ......................... 9s DONE
+  2025-06-30 13:56:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 13:56:05 App\Jobs\ZaraXmlImport ......................... 3s DONE
+  2025-06-30 16:08:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 16:08:20 App\Jobs\ZaraXmlImport ........................ 18s DONE
+  2025-06-30 17:20:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 17:20:23 App\Jobs\ZaraXmlImport ........................ 22s DONE
+  2025-06-30 18:03:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 18:03:07 App\Jobs\ZaraXmlImport ......................... 5s DONE
+  2025-06-30 20:21:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 20:21:05 App\Jobs\ZaraXmlImport ......................... 4s DONE
+  2025-06-30 20:57:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 20:57:22 App\Jobs\ZaraXmlImport ........................ 20s DONE
+  2025-06-30 21:42:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-06-30 21:42:15 App\Jobs\ZaraXmlImport ........................ 13s DONE
+
+   ArgumentCountError 
+
+  Too few arguments to function Illuminate\Routing\PendingResourceRegistration::name(), 1 passed in /home/e91153/public_html/admin.brendoo.com/routes/web.php on line 213 and exactly 2 expected
+
+  at public_html/admin.brendoo.com/vendor/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php:110
+    106▕      * @param  string  $method
+    107▕      * @param  string  $name
+    108▕      * @return \Illuminate\Routing\PendingResourceRegistration
+    109▕      */
+  ➜ 110▕     public function name($method, $name)
+    111▕     {
+    112▕         $this->options['names'][$method] = $name;
+    113▕ 
+    114▕         return $this;
+
+  1   public_html/admin.brendoo.com/routes/web.php:213
+      Illuminate\Routing\PendingResourceRegistration::name("return_reasons")
+      [2m+3 vendor frames [22m
+
+  5   public_html/admin.brendoo.com/routes/web.php:115
+      Illuminate\Support\Facades\Facade::__callStatic("group")
+
+
+   ArgumentCountError 
+
+  Too few arguments to function Illuminate\Routing\PendingResourceRegistration::name(), 1 passed in /home/e91153/public_html/admin.brendoo.com/routes/web.php on line 213 and exactly 2 expected
+
+  at public_html/admin.brendoo.com/vendor/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php:110
+    106▕      * @param  string  $method
+    107▕      * @param  string  $name
+    108▕      * @return \Illuminate\Routing\PendingResourceRegistration
+    109▕      */
+  ➜ 110▕     public function name($method, $name)
+    111▕     {
+    112▕         $this->options['names'][$method] = $name;
+    113▕ 
+    114▕         return $this;
+
+  1   public_html/admin.brendoo.com/routes/web.php:213
+      Illuminate\Routing\PendingResourceRegistration::name("return_reasons")
+      [2m+3 vendor frames [22m
+
+  5   public_html/admin.brendoo.com/routes/web.php:115
+      Illuminate\Support\Facades\Facade::__callStatic("group")
+
+
+   ArgumentCountError 
+
+  Too few arguments to function Illuminate\Routing\PendingResourceRegistration::name(), 1 passed in /home/e91153/public_html/admin.brendoo.com/routes/web.php on line 213 and exactly 2 expected
+
+  at public_html/admin.brendoo.com/vendor/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php:110
+    106▕      * @param  string  $method
+    107▕      * @param  string  $name
+    108▕      * @return \Illuminate\Routing\PendingResourceRegistration
+    109▕      */
+  ➜ 110▕     public function name($method, $name)
+    111▕     {
+    112▕         $this->options['names'][$method] = $name;
+    113▕ 
+    114▕         return $this;
+
+  1   public_html/admin.brendoo.com/routes/web.php:213
+      Illuminate\Routing\PendingResourceRegistration::name("return_reasons")
+      [2m+3 vendor frames [22m
+
+  5   public_html/admin.brendoo.com/routes/web.php:115
+      Illuminate\Support\Facades\Facade::__callStatic("group")
+
+
+   ArgumentCountError 
+
+  Too few arguments to function Illuminate\Routing\PendingResourceRegistration::name(), 1 passed in /home/e91153/public_html/admin.brendoo.com/routes/web.php on line 213 and exactly 2 expected
+
+  at public_html/admin.brendoo.com/vendor/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php:110
+    106▕      * @param  string  $method
+    107▕      * @param  string  $name
+    108▕      * @return \Illuminate\Routing\PendingResourceRegistration
+    109▕      */
+  ➜ 110▕     public function name($method, $name)
+    111▕     {
+    112▕         $this->options['names'][$method] = $name;
+    113▕ 
+    114▕         return $this;
+
+  1   public_html/admin.brendoo.com/routes/web.php:213
+      Illuminate\Routing\PendingResourceRegistration::name("return_reasons")
+      [2m+3 vendor frames [22m
+
+  5   public_html/admin.brendoo.com/routes/web.php:115
+      Illuminate\Support\Facades\Facade::__callStatic("group")
+
+
+   ArgumentCountError 
+
+  Too few arguments to function Illuminate\Routing\PendingResourceRegistration::name(), 1 passed in /home/e91153/public_html/admin.brendoo.com/routes/web.php on line 213 and exactly 2 expected
+
+  at public_html/admin.brendoo.com/vendor/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php:110
+    106▕      * @param  string  $method
+    107▕      * @param  string  $name
+    108▕      * @return \Illuminate\Routing\PendingResourceRegistration
+    109▕      */
+  ➜ 110▕     public function name($method, $name)
+    111▕     {
+    112▕         $this->options['names'][$method] = $name;
+    113▕ 
+    114▕         return $this;
+
+  1   public_html/admin.brendoo.com/routes/web.php:213
+      Illuminate\Routing\PendingResourceRegistration::name("return_reasons")
+      [2m+3 vendor frames [22m
+
+  5   public_html/admin.brendoo.com/routes/web.php:115
+      Illuminate\Support\Facades\Facade::__callStatic("group")
+
+
+   ArgumentCountError 
+
+  Too few arguments to function Illuminate\Routing\PendingResourceRegistration::name(), 1 passed in /home/e91153/public_html/admin.brendoo.com/routes/web.php on line 213 and exactly 2 expected
+
+  at public_html/admin.brendoo.com/vendor/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php:110
+    106▕      * @param  string  $method
+    107▕      * @param  string  $name
+    108▕      * @return \Illuminate\Routing\PendingResourceRegistration
+    109▕      */
+  ➜ 110▕     public function name($method, $name)
+    111▕     {
+    112▕         $this->options['names'][$method] = $name;
+    113▕ 
+    114▕         return $this;
+
+  1   public_html/admin.brendoo.com/routes/web.php:213
+      Illuminate\Routing\PendingResourceRegistration::name("return_reasons")
+      [2m+3 vendor frames [22m
+
+  5   public_html/admin.brendoo.com/routes/web.php:115
+      Illuminate\Support\Facades\Facade::__callStatic("group")
+
+
+   ArgumentCountError 
+
+  Too few arguments to function Illuminate\Routing\PendingResourceRegistration::name(), 1 passed in /home/e91153/public_html/admin.brendoo.com/routes/web.php on line 213 and exactly 2 expected
+
+  at public_html/admin.brendoo.com/vendor/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php:110
+    106▕      * @param  string  $method
+    107▕      * @param  string  $name
+    108▕      * @return \Illuminate\Routing\PendingResourceRegistration
+    109▕      */
+  ➜ 110▕     public function name($method, $name)
+    111▕     {
+    112▕         $this->options['names'][$method] = $name;
+    113▕ 
+    114▕         return $this;
+
+  1   public_html/admin.brendoo.com/routes/web.php:213
+      Illuminate\Routing\PendingResourceRegistration::name("return_reasons")
+      [2m+3 vendor frames [22m
+
+  5   public_html/admin.brendoo.com/routes/web.php:115
+      Illuminate\Support\Facades\Facade::__callStatic("group")
+
+  2025-07-01 12:18:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 12:19:58 App\Jobs\ZaraXmlImport ..................... 1m 55s DONE
+  2025-07-01 13:53:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 13:53:13 App\Jobs\ZaraXmlImport ........................ 10s DONE
+  2025-07-01 15:00:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 15:00:16 App\Jobs\ZaraXmlImport ........................ 14s DONE
+  2025-07-01 15:20:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 15:20:32 App\Jobs\ZaraXmlImport ........................ 29s DONE
+  2025-07-01 17:37:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 17:37:08 App\Jobs\ZaraXmlImport ......................... 5s DONE
+  2025-07-01 18:22:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 18:22:20 App\Jobs\ZaraXmlImport ........................ 18s DONE
+  2025-07-01 21:34:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 21:34:33 App\Jobs\ZaraXmlImport ........................ 30s DONE
+  2025-07-01 23:43:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-01 23:43:31 App\Jobs\ZaraXmlImport ........................ 29s DONE
+  2025-07-02 01:29:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-02 01:29:54 App\Jobs\ZaraXmlImport ........................ 52s DONE
+
+   ParseError 
+
+  syntax error, unexpected token "}"
+
+  at public_html/admin.brendoo.com/routes/api.php:214
+    210▕     Route::post('update-profile',[InfluencerAuthController::class,'updateProfile'])->name('updateProfile');
+    211▕     Route::get('promocodes',[PromoCodeController::class,'index'])->name('promocodes.index');
+    212▕ 
+    213▕     collection/create
+  ➜ 214▕ });
+    215▕
+
+      [2m+19 vendor frames [22m
+
+  20  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(Illuminate\Foundation\Support\Providers\RouteServiceProvider), "Illuminate\Foundation\Support\Providers\RouteServiceProvider")
+      [2m+6 vendor frames [22m
+
+  27  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+  2025-07-02 15:12:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-02 15:12:24 App\Jobs\ZaraXmlImport ........................ 22s DONE
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+
+In app.php line 127:
+                                    
+  Call to undefined function enc()  
+                                    
+
+  2025-07-02 15:50:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-02 15:50:17 App\Jobs\ZaraXmlImport ........................ 15s DONE
+  2025-07-02 16:36:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-02 16:37:03 App\Jobs\ZaraXmlImport ...................... 1m 1s DONE
+  2025-07-02 19:10:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-02 19:10:09 App\Jobs\ZaraXmlImport ......................... 7s DONE
+  2025-07-02 21:42:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-02 21:42:20 App\Jobs\ZaraXmlImport ........................ 18s DONE
+  2025-07-06 10:01:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 10:01:29 App\Jobs\ZaraXmlImport ........................ 26s DONE
+  2025-07-06 10:22:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 10:22:32 App\Jobs\ZaraXmlImport ........................ 30s DONE
+  2025-07-06 11:07:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 11:07:23 App\Jobs\ZaraXmlImport ........................ 20s DONE
+  2025-07-06 12:37:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 12:37:22 App\Jobs\ZaraXmlImport ........................ 20s DONE
+  2025-07-06 13:40:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 13:40:36 App\Jobs\ZaraXmlImport ........................ 34s DONE
+  2025-07-06 16:53:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 16:53:27 App\Jobs\ZaraXmlImport ........................ 25s DONE
+  2025-07-06 16:59:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 17:00:21 App\Jobs\ZaraXmlImport ..................... 1m 18s DONE
+  2025-07-06 18:18:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 18:18:05 App\Jobs\ZaraXmlImport ......................... 3s DONE
+  2025-07-06 18:21:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 18:21:05 App\Jobs\ZaraXmlImport ......................... 2s DONE
+  2025-07-06 18:48:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-06 18:48:38 App\Jobs\ZaraXmlImport ........................ 36s DONE
+  2025-07-07 13:28:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 13:28:06 App\Jobs\ZaraXmlImport ......................... 4s DONE
+  2025-07-07 13:57:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 13:57:10 App\Jobs\ZaraXmlImport ......................... 7s DONE
+  2025-07-07 15:29:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 15:29:33 App\Jobs\ZaraXmlImport ........................ 31s DONE
+  2025-07-07 15:48:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 15:48:05 App\Jobs\ZaraXmlImport ......................... 3s DONE
+  2025-07-07 16:58:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 16:58:25 App\Jobs\ZaraXmlImport ........................ 23s DONE
+  2025-07-07 17:33:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 17:33:07 App\Jobs\ZaraXmlImport ......................... 5s DONE
+  2025-07-07 19:16:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 19:17:10 App\Jobs\ZaraXmlImport ...................... 1m 8s DONE
+  2025-07-07 20:38:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-07 20:38:21 App\Jobs\ZaraXmlImport ........................ 19s DONE
+  2025-07-08 01:03:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 01:04:05 App\Jobs\ZaraXmlImport ...................... 1m 3s DONE
+  2025-07-08 12:39:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 12:39:33 App\Jobs\ZaraXmlImport ........................ 32s DONE
+  2025-07-08 13:30:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 13:30:39 App\Jobs\ZaraXmlImport ........................ 37s DONE
+  2025-07-08 13:56:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 13:57:33 App\Jobs\ZaraXmlImport ..................... 1m 30s DONE
+  2025-07-08 15:07:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 15:08:26 App\Jobs\ZaraXmlImport ..................... 1m 24s DONE
+  2025-07-08 15:23:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 15:23:30 App\Jobs\ZaraXmlImport ........................ 28s DONE
+
+   ParseError 
+
+  syntax error, unexpected end of file
+
+  at public_html/admin.brendoo.com/routes/web.php:290
+    286▕ 
+    287▕ 
+    288▕ 
+    289▕ 
+  ➜ 290▕
+
+      [2m+19 vendor frames [22m
+
+  20  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(Illuminate\Foundation\Support\Providers\RouteServiceProvider), "Illuminate\Foundation\Support\Providers\RouteServiceProvider")
+      [2m+6 vendor frames [22m
+
+  27  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+  2025-07-08 19:21:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 19:21:08 App\Jobs\ZaraXmlImport ......................... 5s DONE
+  2025-07-08 20:38:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 20:38:12 App\Jobs\ZaraXmlImport ......................... 9s DONE
+  2025-07-08 20:58:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 20:58:08 App\Jobs\ZaraXmlImport ......................... 5s DONE
+  2025-07-08 22:37:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-08 22:37:37 App\Jobs\ZaraXmlImport ........................ 35s DONE
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+  2025-07-10 20:51:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-10 20:53:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-10 20:53:02 App\Jobs\ZaraXmlImport ..................... 7.65ms FAIL
+  2025-07-10 20:53:08 App\Jobs\ZaraXmlImport ...................... 2m 7s DONE
+  2025-07-11 20:47:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-11 20:47:30 App\Jobs\ZaraXmlImport ........................ 29s DONE
+  2025-07-12 13:58:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-12 13:58:16 App\Jobs\ZaraXmlImport ........................ 13s DONE
+  2025-07-12 15:14:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-12 15:14:10 App\Jobs\ZaraXmlImport ......................... 8s DONE
+  2025-07-12 15:16:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-12 15:16:28 App\Jobs\ZaraXmlImport ........................ 26s DONE
+  2025-07-12 16:13:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-12 16:13:03 App\Jobs\ZaraXmlImport ......................... 1s DONE
+  2025-07-12 18:08:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-07-12 18:08:43 App\Jobs\ZaraXmlImport ........................ 42s DONE
