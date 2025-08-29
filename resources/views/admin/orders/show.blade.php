@@ -22,10 +22,14 @@
                         <div class="card-header bg-info text-white fw-bold">
                             <i class="fas fa-user me-2"></i> Müştəri Məlumatları
                         </div>
+
+                       
                         <div class="card-body">
                             <p><strong>👤 Adı:</strong> {{ $order->customer?->name }}</p>
                             <p><strong>🆔 ID:</strong> {{ $order->customer?->id }}</p>
                             <p><strong>📍 Ünvan:</strong> {{ $order->address ?? 'Ünvan yoxdur' }}</p>
+                            <p><strong>📍 Region:</strong> {{ $order->region()->latest()->first()?->regionName}}</p>
+                            <p><strong>📍 Şəhər:</strong> {{ $order->city()->latest()->first()?->cityName}}</p>
                             <p><strong>📝 Əlavə Məlumat:</strong> {{ $order->additional_info ?? 'Əlavə məlumat yoxdur' }}</p>
                             @php 
                             $status = new \App\Models\Status;

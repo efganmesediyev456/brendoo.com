@@ -20,7 +20,7 @@ class CategoryResource extends JsonResource
             'title' =>  $this->title,
             'image' => $base_url . '/storage/' . $this->image,
             'subCategories' => SubCategoryResource::collection($this->subCategories),
-            'filters' => FilterResource::collection($this->filters)
+            // 'filters' => FilterResource::collection($this->filters)
         ];
     }
 }

@@ -16,14 +16,14 @@ class BalanceResource extends JsonResource
     {
         return [
             "id" => $this->id,
-            'influencer'=>$this->demandPaymentBalance?->influencer?->fullName,
-            'balance'=>null,
-            'amount'=>$this->amount,
-            'balance_type'=>$this->type,
-            'customer'=>$this->customer?->fullName,
-            'created_at'=>$this->created_at->format('Y-m-d H:i:s'),
-            'coupon'=>$this->coupon?->code,
-            'collection'=>$this->collection?->title
+            'influencer' => $this->demandPaymentBalance?->influencer?->fullName,
+            'balance' => null,
+            'amount' => $this->amount,
+            'balance_type' => $this->type == 'collection' ? 'коллекция' : 'купон',
+            'customer' => $this->customer?->fullName,
+            'created_at' => $this->created_at->format('Y-m-d H:i:s'),
+            'coupon' => $this->coupon?->code,
+            'collection' => $this->collection?->title,
         ];
     }
 }

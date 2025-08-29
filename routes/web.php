@@ -128,7 +128,7 @@ Route::group(['middleware' =>'auth'], function (){
     Route::get('/home', [PageController::class,'home'])->name('home');
     Route::get('/logout',[AuthController::class,'logout'])->name('logout');
     Route::resource('users',UserController::class);
-    Route::resource('on_boardings',OnBoardingController::class);
+    // Route::resource('on_boardings',OnBoardingController::class);
     Route::resource('translations',TranslationController::class);
     Route::resource('roles',RoleController::class);
     Route::resource('permissions',PermissionController::class);
@@ -322,16 +322,12 @@ Route::get('/sitemap-static.xml', [SitemapController::class, 'static']);
 
 
 
+use App\Jobs\SendTestMailJob;
 
 Route::get('/test/mail', function () {
-    Mail::raw('Salam qaqa, bu sadə raw maildir!', function ($message) {
-        $message->to('efqanesc@gmail.com')
-                ->subject('Test Mail - Raw');
-    });
-
-    return 'Mddddail göndərildi, qaqa.';
+    dispatch(new SendTestMailJob('efqanesc@gmail.com'));
+    return 'Mail növbəyə atıldı, qaqa.';
 });
-
 
 
 

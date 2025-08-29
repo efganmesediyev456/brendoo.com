@@ -17,7 +17,7 @@ class DemandPaymentResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'amount' => $this->amount,
+            'amount' => number_format($this->amount, 2, '.', ''), 
             "earningReason"=>$this->earningReason,
             "paymentStatus"=>$this->status?->label(),
             "isPaid" => $this->status === DemandPaymentStatusEnum::Paid,

@@ -555,3 +555,529 @@ In app.php line 127:
   2025-07-12 16:13:03 App\Jobs\ZaraXmlImport ......................... 1s DONE
   2025-07-12 18:08:01 App\Jobs\ZaraXmlImport ......................... RUNNING
   2025-07-12 18:08:43 App\Jobs\ZaraXmlImport ........................ 42s DONE
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   Error 
+
+  Class "App\Providers\Model" not found
+
+  at public_html/admin.brendoo.com/app/Providers/AppServiceProvider.php:34
+     30▕             \App\Models\Product::class,
+     31▕             \App\Models\Category::class,
+     32▕         ];
+     33▕ 
+  ➜  34▕         Model::saved(function ($model) use ($modelsToFlush) {
+     35▕             if (in_array(get_class($model), $modelsToFlush)) {
+     36▕                 Cache::flush();
+     37▕             }
+     38▕         });
+
+      [2m+7 vendor frames [22m
+
+  8   [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(App\Providers\AppServiceProvider), "App\Providers\AppServiceProvider")
+      [2m+6 vendor frames [22m
+
+  15  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+  2025-08-15 10:31:01 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-08-15 10:31:02 App\Jobs\ZaraXmlImport ................... 215.95ms DONE
+  2025-08-15 10:49:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-08-15 10:49:16 App\Jobs\ZaraXmlImport ........................ 13s DONE
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   ErrorException 
+
+  shell_exec(): Unable to execute 'stty 2> /dev/null'
+
+  at public_html/admin.brendoo.com/vendor/symfony/console/Terminal.php:131
+    127▕         if (!\function_exists('shell_exec')) {
+    128▕             return false;
+    129▕         }
+    130▕ 
+  ➜ 131▕         return self::$stty = (bool) shell_exec('stty 2> '.('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+    132▕     }
+    133▕ 
+    134▕     private static function initDimensions(): void
+    135▕     {
+
+      [2m+15 vendor frames [22m
+
+  16  public_html/admin.brendoo.com/artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+sh: fork: retry: No child processes
+  2025-08-26 09:24:02 App\Jobs\ProcessProductImport .................. RUNNING
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)
+
+  at public_html/admin.brendoo.com/app/Jobs/ProcessProductImport.php:77
+     73▕ 
+     74▕         $calculatorService = new PriceCalculatorService();
+     75▕         $xmlContent        = file_get_contents($fullPath);
+     76▕         $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+  ➜  77▕         $json              = json_decode(json_encode($xml), true);
+     78▕         $products          = $json['Product'] ?? [];
+     79▕ 
+     80▕         foreach ($products as $product) {
+     81▕             if (Product::query()->where('listing_id', $product['id'])->exists()) {
+
+
+   Whoops\Exception\ErrorException 
+
+  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)
+
+  at public_html/admin.brendoo.com/app/Jobs/ProcessProductImport.php:77
+     73▕ 
+     74▕         $calculatorService = new PriceCalculatorService();
+     75▕         $xmlContent        = file_get_contents($fullPath);
+     76▕         $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+  ➜  77▕         $json              = json_decode(json_encode($xml), true);
+     78▕         $products          = $json['Product'] ?? [];
+     79▕ 
+     80▕         foreach ($products as $product) {
+     81▕             if (Product::query()->where('listing_id', $product['id'])->exists()) {
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+  2025-08-26 09:26:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 09:26:02 App\Jobs\ProcessProductImport .............. 7.59ms FAIL
+  2025-08-26 10:37:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 10:39:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 10:39:02 App\Jobs\ProcessProductImport .............. 7.07ms FAIL
+  2025-08-26 13:42:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 13:43:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 13:44:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 13:44:02 App\Jobs\ProcessProductImport .............. 6.38ms FAIL
+  2025-08-26 13:45:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 13:45:01 App\Jobs\ProcessProductImport .............. 6.16ms FAIL
+  2025-08-26 13:48:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 13:50:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 13:50:02 App\Jobs\ProcessProductImport ............. 24.12ms FAIL
+  2025-08-26 13:55:02 App\Jobs\ProcessProductImport .................. RUNNING
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)
+
+  at public_html/admin.brendoo.com/app/Jobs/ProcessProductImport.php:77
+     73▕ 
+     74▕         $calculatorService = new PriceCalculatorService();
+     75▕         $xmlContent        = file_get_contents($fullPath);
+     76▕         $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+  ➜  77▕         $json              = json_decode(json_encode($xml), true);
+     78▕         $products          = $json['Product'] ?? [];
+     79▕ 
+     80▕         foreach ($products as $product) {
+     81▕             if (Product::query()->where('listing_id', $product['id'])->exists()) {
+
+
+   Whoops\Exception\ErrorException 
+
+  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)
+
+  at public_html/admin.brendoo.com/app/Jobs/ProcessProductImport.php:77
+     73▕ 
+     74▕         $calculatorService = new PriceCalculatorService();
+     75▕         $xmlContent        = file_get_contents($fullPath);
+     76▕         $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+  ➜  77▕         $json              = json_decode(json_encode($xml), true);
+     78▕         $products          = $json['Product'] ?? [];
+     79▕ 
+     80▕         foreach ($products as $product) {
+     81▕             if (Product::query()->where('listing_id', $product['id'])->exists()) {
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+  2025-08-26 13:57:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 13:57:01 App\Jobs\ProcessProductImport ............. 12.78ms FAIL
+  2025-08-26 14:47:49 App\Jobs\ProcessProductImport  2025-08-26 14:47:49 App\Jobs\ProcessProductImport ........... 1h 5m 47s ............. DONE
+ 59m 47s DONE
+  2025-08-26 14:47:50 App\Jobs\ProcessProductImport ........... 1h 4m 49s DONE
+  2025-08-26 15:01:01 App\Jobs\ProcessProductImport .................. RUNNING
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)
+
+  at public_html/admin.brendoo.com/app/Jobs/ProcessProductImport.php:77
+     73▕ 
+     74▕         $calculatorService = new PriceCalculatorService();
+     75▕         $xmlContent        = file_get_contents($fullPath);
+     76▕         $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+  ➜  77▕         $json              = json_decode(json_encode($xml), true);
+     78▕         $products          = $json['Product'] ?? [];
+     79▕ 
+     80▕         foreach ($products as $product) {
+     81▕             if (Product::query()->where('listing_id', $product['id'])->exists()) {
+
+
+   Whoops\Exception\ErrorException 
+
+  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)
+
+  at public_html/admin.brendoo.com/app/Jobs/ProcessProductImport.php:77
+     73▕ 
+     74▕         $calculatorService = new PriceCalculatorService();
+     75▕         $xmlContent        = file_get_contents($fullPath);
+     76▕         $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+  ➜  77▕         $json              = json_decode(json_encode($xml), true);
+     78▕         $products          = $json['Product'] ?? [];
+     79▕ 
+     80▕         foreach ($products as $product) {
+     81▕             if (Product::query()->where('listing_id', $product['id'])->exists()) {
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+  2025-08-26 15:03:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 15:03:01 App\Jobs\ProcessProductImport ............. 17.87ms FAIL
+  2025-08-26 16:17:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 16:17:01 App\Jobs\ProcessProductImport .............. 5.95ms FAIL
+  2025-08-26 16:40:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 16:40:02 App\Jobs\ProcessProductImport .............. 7.01ms FAIL
+  2025-08-26 16:43:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 17:02:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 17:02:01 App\Jobs\ProcessProductImport .............. 6.44ms FAIL
+  2025-08-26 18:07:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 18:07:02 App\Jobs\ProcessProductImport .............. 7.81ms FAIL
+  2025-08-26 19:03:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 19:05:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-26 19:05:02 App\Jobs\ProcessProductImport .............. 9.16ms FAIL
+  2025-08-26 19:20:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-08-26 19:20:48 App\Jobs\ZaraXmlImport ........................ 46s DONE
+  2025-08-27 01:11:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-08-27 01:11:10 App\Jobs\ZaraXmlImport ......................... 8s DONE
+  2025-08-27 02:35:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-08-27 02:35:10 App\Jobs\ZaraXmlImport ......................... 7s DONE
+  2025-08-27 08:28:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 08:30:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 08:30:02 App\Jobs\ProcessProductImport ............. 12.58ms FAIL
+  2025-08-27 08:45:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 08:45:01 App\Jobs\ProcessProductImport ............. 21.75ms FAIL
+  2025-08-27 08:50:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 08:50:02 App\Jobs\ProcessProductImport ............. 13.51ms FAIL
+  2025-08-27 09:09:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 09:09:02 App\Jobs\ProcessProductImport .............. 7.12ms FAIL
+  2025-08-27 09:16:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 09:16:02 App\Jobs\ProcessProductImport .............. 8.06ms FAIL
+  2025-08-27 15:03:01 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 15:05:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 15:05:02 App\Jobs\ProcessProductImport .............. 8.97ms FAIL
+  2025-08-27 15:08:02 App\Jobs\ProcessProductImport .................. RUNNING
+  2025-08-27 15:08:02 App\Jobs\ProcessProductImport .............. 9.21ms FAIL
+  2025-08-27 15:12:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:12:02 App\Jobs\ProcessSingleProduct ............ 187.09ms FAIL
+  2025-08-27 15:13:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:13:02 App\Jobs\ProcessSingleProduct ............. 86.96ms FAIL
+  2025-08-27 15:14:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:14:02 App\Jobs\ProcessSingleProduct ............ 111.10ms FAIL
+  2025-08-27 15:15:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:15:01 App\Jobs\ProcessSingleProduct ............ 143.86ms FAIL
+  2025-08-27 15:20:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:20:02 App\Jobs\ProcessSingleProduct ............ 234.19ms DONE
+  2025-08-27 15:21:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:21:01 App\Jobs\ProcessSingleProduct ............ 168.51ms DONE
+  2025-08-27 15:22:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:22:02 App\Jobs\ProcessSingleProduct ............ 202.20ms DONE
+  2025-08-27 15:23:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:23:02 App\Jobs\ProcessSingleProduct ............ 133.80ms DONE
+  2025-08-27 15:24:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:24:01 App\Jobs\ProcessSingleProduct ............ 106.24ms DONE
+  2025-08-27 15:25:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:25:02 App\Jobs\ProcessSingleProduct ............ 294.74ms DONE
+  2025-08-27 15:26:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:26:02 App\Jobs\ProcessSingleProduct ............ 213.96ms DONE
+  2025-08-27 15:27:03 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:27:08 App\Jobs\ProcessSingleProduct .................. 5s DONE
+  2025-08-27 15:28:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:28:02 App\Jobs\ProcessSingleProduct ............ 126.61ms DONE
+  2025-08-27 15:29:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:29:02 App\Jobs\ProcessSingleProduct ............ 130.15ms DONE
+  2025-08-27 15:35:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:35:02 App\Jobs\ProcessSingleProduct ............ 158.84ms DONE
+  2025-08-27 15:36:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:36:01 App\Jobs\ProcessSingleProduct ............ 142.95ms DONE
+  2025-08-27 15:37:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:37:02 App\Jobs\ProcessSingleProduct ............. 28.15ms DONE
+  2025-08-27 15:52:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:52:02 App\Jobs\ProcessSingleProduct ............ 157.90ms DONE
+  2025-08-27 15:53:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:53:02 App\Jobs\ProcessSingleProduct ............ 121.12ms DONE
+  2025-08-27 15:54:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:54:02 App\Jobs\ProcessSingleProduct ............ 114.71ms DONE
+  2025-08-27 15:55:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:55:01 App\Jobs\ProcessSingleProduct ............ 135.77ms DONE
+  2025-08-27 15:56:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:56:02 App\Jobs\ProcessSingleProduct ............ 148.99ms DONE
+  2025-08-27 15:57:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:57:02 App\Jobs\ProcessSingleProduct ............ 117.95ms DONE
+  2025-08-27 15:58:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:58:02 App\Jobs\ProcessSingleProduct ............ 127.86ms DONE
+  2025-08-27 15:59:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 15:59:01 App\Jobs\ProcessSingleProduct ............ 164.76ms DONE
+  2025-08-27 16:00:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 16:00:02 App\Jobs\ProcessSingleProduct ............ 226.25ms DONE
+  2025-08-27 16:32:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 16:32:02 App\Jobs\ProcessSingleProduct ............. 86.69ms DONE
+  2025-08-27 16:33:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 16:33:01 App\Jobs\ProcessSingleProduct ............. 20.77ms DONE
+  2025-08-27 16:34:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 16:34:02 App\Jobs\ProcessSingleProduct ............. 74.98ms DONE
+  2025-08-27 16:35:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 16:35:02 App\Jobs\ProcessSingleProduct ............ 172.41ms DONE
+  2025-08-27 16:36:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-27 16:36:02 App\Jobs\ProcessSingleProduct ............. 49.76ms DONE
+  2025-08-28 01:25:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:25:02 App\Jobs\ProcessSingleProduct ............ 105.50ms DONE
+  2025-08-28 01:29:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:29:02 App\Jobs\ProcessSingleProduct ............. 52.87ms DONE
+  2025-08-28 01:31:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:31:01 App\Jobs\ProcessSingleProduct ............. 55.76ms DONE
+  2025-08-28 01:32:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:32:02 App\Jobs\ProcessSingleProduct ............. 62.48ms DONE
+  2025-08-28 01:33:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:33:02 App\Jobs\ProcessSingleProduct ............. 76.73ms DONE
+  2025-08-28 01:34:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:34:01 App\Jobs\ProcessSingleProduct ............. 65.96ms DONE
+  2025-08-28 01:39:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:39:02 App\Jobs\ProcessSingleProduct ............. 42.58ms DONE
+  2025-08-28 01:40:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:40:02 App\Jobs\ProcessSingleProduct ............ 142.26ms DONE
+  2025-08-28 01:41:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 01:41:02 App\Jobs\ProcessSingleProduct ............ 147.46ms DONE
+  2025-08-28 02:12:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 02:12:02 App\Jobs\ProcessSingleProduct ............. 55.86ms DONE
+  2025-08-28 02:13:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 02:13:01 App\Jobs\ProcessSingleProduct ............. 60.16ms DONE
+  2025-08-28 02:20:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 02:20:02 App\Jobs\ProcessSingleProduct ............ 101.84ms DONE
+  2025-08-28 02:22:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 02:22:02 App\Jobs\ProcessSingleProduct ............ 258.28ms DONE
+  2025-08-28 02:23:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 02:23:02 App\Jobs\ProcessSingleProduct ............. 66.19ms DONE
+  2025-08-28 02:25:02 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 02:25:02 App\Jobs\ProcessSingleProduct ............. 72.79ms DONE
+  2025-08-28 02:27:01 App\Jobs\ProcessSingleProduct .................. RUNNING
+  2025-08-28 02:27:01 App\Jobs\ProcessSingleProduct ............. 42.79ms DONE
+  2025-08-28 16:31:02 App\Jobs\ZaraXmlImport ......................... RUNNING
+  2025-08-28 16:31:02 App\Jobs\ZaraXmlImport .................... 10.41ms FAIL

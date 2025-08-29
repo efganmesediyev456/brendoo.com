@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class PasswordResetMail extends Mailable
+class PasswordResetInfluencerMail extends Mailable
 {
     use SerializesModels;
 
@@ -32,7 +32,7 @@ class PasswordResetMail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.password_reset')
+        return $this->view('emails.password_reset_influencer')
             ->subject('Ссылка для сброса пароля')
             ->with([
                 'resetUrl' => $this->resetUrl,

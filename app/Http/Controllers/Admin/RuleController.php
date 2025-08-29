@@ -38,6 +38,7 @@ class RuleController extends Controller
 
     public function index()
     {
+        app()->setLocale('ru');
         $rules = Rule::paginate(10);
 
         return view('admin.rules.index', compact('rules'));

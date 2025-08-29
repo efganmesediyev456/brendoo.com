@@ -13,7 +13,7 @@ class Tiktok extends Model
 
     use HasFactory, Translatable, SoftDeletes,LogsActivityTrait;
     public $translatedAttributes = ['title'];
-    protected $fillable = ['is_active','image'];
+    protected $fillable = ['is_active','image', 'url'];
 
     public function products()
     {

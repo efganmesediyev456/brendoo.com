@@ -19,7 +19,7 @@ class MainResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
-            'image' => $base_url . '/storage/' . $this->image
+            'image' => $this->url ? $this->url : $base_url . '/storage/' . $this->image
         ];
     }
 }

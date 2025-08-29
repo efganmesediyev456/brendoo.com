@@ -109,6 +109,7 @@ class MainController extends Controller
         $main->update( [
 
             'is_active'=> $request->is_active,
+            'url'=> $request->url,
             'en'=>[
                 'title'=>$request->en_title,
                 'description'=>$request->en_description,

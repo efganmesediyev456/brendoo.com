@@ -651,14 +651,14 @@
                         </a>
                     </li>
                      @endcan
-                     @can('list-on_boardings')
+                     {{-- @can('list-on_boardings')
                     <li>
                         <a href="{{ route('on_boardings.index') }}">
                             <i class="ri-contacts-line"></i>
                             <span>On boarding (mobil app)</span>
                         </a>
                     </li>
-                       @endcan
+                       @endcan --}}
                     @can('list-mobile-banners')      
                         <li>
                             <a href="{{ route('mobile-banners.index') }}">

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Translation extends Model
 {
@@ -11,4 +12,15 @@ class Translation extends Model
 
     public $translatedAttributes = ['title'];
     protected $fillable = ['key'];
+
+     protected static function booted()
+    {
+        static::saved(function ($brand) {
+            Cache::flush();
+        });
+
+        static::deleted(function ($brand) {
+            Cache::flush();
+        });
+    }
 }

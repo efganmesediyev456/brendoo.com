@@ -55,6 +55,13 @@
                                     <input class="form-check-input" type="checkbox" id="is_active" name="is_active" {{ old('is_active', $tiktok->is_active) ? 'checked' : '' }}>
                                     <label class="form-check-label" for="is_active">Aktiv</label>
                                 </div>
+
+                                 <div class="mb-3">
+                                                <label class="col-form-label">Url</label>
+                                                <input class="form-control" type="text" name="url" value="{{ $tiktok->url }}">
+                                                @if($errors->first("url")) <small class="form-text text-danger">{{ $errors->first("url") }}</small> @endif
+                                            </div>
+
                                 <div class="mb-3">
                                     <button class="btn btn-primary">Yadda saxla</button>
                                 </div>

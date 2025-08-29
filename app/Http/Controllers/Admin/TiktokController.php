@@ -81,8 +81,10 @@ class TiktokController extends Controller
             $file->storeAs('public/',$filename);
         }
 
+
         Tiktok::create([
             'image'=> $filename,
+            'url'=> $request->url,
             'en'=>[
                 'title'=>$request->en_title,
             ],
@@ -120,6 +122,7 @@ class TiktokController extends Controller
 
         $tiktok->update( [
             'is_active' => $request->has('is_active'),
+            'url'=> $request->url,
             'en'=>[
                 'title'=>$request->en_title,
             ],

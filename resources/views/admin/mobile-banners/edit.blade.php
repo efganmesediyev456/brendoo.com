@@ -128,14 +128,14 @@
                                     @endif
                                 </div>
 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label class="col-form-label">Logo</label>
                                     <img style="width: 100px; height: 100px;" src="{{ asset('storage/' . $banner->logo) }}" alt="{{ $banner->logo }}">
                                     <input class="form-control" type="file" name="logo">
                                     @if($errors->first('logo'))
                                         <small class="form-text text-danger">{{ $errors->first('logo') }}</small>
                                     @endif
-                                </div>
+                                </div> --}}
                                 <div class="mb-3">
                                     <label class="col-form-label">Active</label>
                                     <select name="is_active" class="form-control">

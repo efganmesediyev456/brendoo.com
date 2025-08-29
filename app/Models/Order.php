@@ -41,13 +41,17 @@ class Order extends Model
 
 
 
-    public function region(){
-        return $this->belongsTo(Region::class,'regionId', 'id');
-    }
+ 
+    public function region()
+{
+    return $this->belongsTo(Region::class, 'regionId', 'regionId');
+}
+
 
     public function city(){
-        return $this->belongsTo(City::class,'cityId');
+        return $this->belongsTo(City::class,'cityId','cityId');
     }
+
 
 
     public function orderCancellation(){

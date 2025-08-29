@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Imports\ProductsImport;
 use App\Jobs\ProcessProductImport;
+use App\Jobs\ProcessSingleProduct;
 use App\Jobs\ZaraXmlImport;
 use App\Models\Brand;
 use App\Models\Category;
@@ -368,6 +369,9 @@ class ProductController extends Controller
             $data = $request->all();
 
             if (isset($data['filter_id'])) {
+
+
+                
                 DB::table('product_filter_options')->where('product_id', $product->id)->delete();
 
                 foreach ($data['filter_id'] as $filterId) {
@@ -384,6 +388,22 @@ class ProductController extends Controller
                         ]);
                     }
                 }
+
+                
+                activity()
+                    ->inLog('Product') 
+                    ->performedOn($product)
+                    ->causedBy(auth()->user())
+                    ->withProperties([
+                        'filters'          => $data['filter_id'],
+                        'selected_options' => $data['selected_options'] ?? []
+                    ])
+                    ->event('updated')
+                    ->log('Product filters updated');
+
+
+
+
             }
 
             DB::commit();
@@ -424,7 +444,7 @@ class ProductController extends Controller
     public function import(Request $request)
     {
 
-            $request->validate([
+        $request->validate([
                 'xml_file' => 'required',
             ]);
 
@@ -432,14 +452,35 @@ class ProductController extends Controller
 
         $file = $request->file('xml_file');
         $filePath = $file->storeAs('imports', uniqid() . '.xml'); // storage/app/imports/*.xml
-        ProcessProductImport::dispatch(
-            $filePath,
-            $request->category_id,
-            $request->sub_category_id,
-            $request->third_category_id,
-            $request->brand_id,
-            auth()->id()
-        );
+
+        $fullPath = storage_path('app/' . $filePath);
+
+
+        $xmlContent = file_get_contents($fullPath);
+        $xml        = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+        $json       = json_decode(json_encode($xml), true);
+        $products   = $json['Product'] ?? [];
+
+        foreach ($products as $product) {
+            ProcessSingleProduct::dispatch(
+                $product,
+                $request->category_id,
+                $request->sub_category_id,
+                $request->third_category_id,
+                $request->brand_id,
+                auth()->id()
+            );
+        }
+
+
+        // ProcessProductImport::dispatch(
+        //     $filePath,
+        //     $request->category_id,
+        //     $request->sub_category_id,
+        //     $request->third_category_id,
+        //     $request->brand_id,
+        //     auth()->id()
+        // );
 
         return redirect()->back()->with('success', 'Yükləmə başladı, məhsullar fon rejimində əlavə olunacaq.');
     }

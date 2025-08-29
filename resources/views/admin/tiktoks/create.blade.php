@@ -39,6 +39,12 @@
                                     @if($errors->first('image')) <small class="form-text text-danger">{{ $errors->first('image') }}</small> @endif
                                 </div>
 
+                                <div class="mb-3">
+                                    <label class="col-form-label">Url</label>
+                                    <input class="form-control" type="text" name="url">
+                                    @if($errors->first('url')) <small class="form-text text-danger">{{ $errors->first('url') }}</small> @endif
+                                </div>
+
                                 <div class="mb-3 mt-4">
                                     <button class="btn btn-success">Yadda saxla</button>
                                 </div>

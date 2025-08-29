@@ -38,4 +38,10 @@ class StockNotificationController extends Controller
     }
 
 
+
+    public function destroy($id, Request $request){
+        StockNotification::destroy($id);
+        return redirect()->back()->with('message','Mesajınız uğurla silindi.');
+    }
+
 }

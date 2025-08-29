@@ -24,7 +24,7 @@ class DemandPaymentController extends Controller
     public function index()
     {
 
-        $demandPayments = DemandPayment::query()->paginate(10);
+        $demandPayments = DemandPayment::query()->where('status','<>', DemandPaymentStatusEnum::NotRequested)->paginate(10);
         return view('admin.demand-payments.index', compact('demandPayments'));
 
     }

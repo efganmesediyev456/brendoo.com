@@ -153,6 +153,8 @@ class BasketItemController extends Controller
 
     public function storeMultipleBasketItems(Request $request) : JsonResponse
     {
+
+        // dd($request->all());
         try {
             $validated = $request->validate([
                 'basket_items' => 'required|array',

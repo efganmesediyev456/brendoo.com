@@ -13,13 +13,16 @@ use Illuminate\Support\Facades\Cache;
 class InstagramController extends Controller
 {
   public function index(): JsonResponse
-{
-    // $instagrams = Cache::remember('instagram_all_'.app()->getLocale(), 3600, function () {
-    //     return Instagram::orderByDesc('id')->get();
-    // });
+  {
+    $instagrams = Cache::remember('instagram_all-' . app()->getLocale(), 3600, function () {
+      return Instagram::with([
+        'translations',
+        'products',
+        'products.translations'
+      ])->orderByDesc('id')->get();
+    });
 
-     $instagrams = Instagram::orderByDesc('id')->get();
 
     return response()->json(InstagramResource::collection($instagrams));
-}
+  }
 }

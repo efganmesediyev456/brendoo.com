@@ -402,15 +402,17 @@ class OrderController extends Controller
         ]);
 
         $order = Order::findOrFail($validated['order_id']);
-
         $order->address = $validated['address'];
-
+        if($request->has('regionId')){
+            $order->regionId = $request->region_id;
+        }
+        if($request->has('cityId')){
+            $order->cityId = $request->city_id;
+        }
         if (isset($validated['additional_info'])) {
             $order->additional_info = $validated['additional_info'];
         }
-
         $order->save();
-
         return response()->json([
             'message' => 'Address changed successfully.',
             'order'   => $order->only(['id', 'address', 'additional_info']),

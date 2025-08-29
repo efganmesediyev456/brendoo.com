@@ -25,6 +25,7 @@ class CouponResource extends JsonResource
             "total_earnings"=>$this->influencer->typeBalanceValues('coupon')->where('coupon_id', $this->id)->where('type','IN')->sum('amount'),
             "from_date"=>$this->valid_from,
             "to_date"=>$this->valid_until,
+            'is_expired' => !Carbon::parse($this->valid_until)->isFuture(),
             "status" => Carbon::parse($this->valid_until)->isFuture()
                 ? [
                     'az' => 'Aktiv',

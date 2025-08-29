@@ -12,7 +12,6 @@ class FavoriteController extends Controller
 {
     public function index() : JsonResponse
     {
-
         try {
             $favorites = Favorite::query()->where('customer_id', auth()->user()->id)->with('product.sliders')->get();
             return response()->json(FavoriteResource::collection($favorites));

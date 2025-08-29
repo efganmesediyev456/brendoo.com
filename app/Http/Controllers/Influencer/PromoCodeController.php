@@ -13,6 +13,12 @@ class PromoCodeController extends Controller
 
         $user = auth("influencers")->user();
 
+        $language = $request->header('Accept-Language');
+        if(strlen($language) != 2) {
+           $language = 'ru';
+        }
+        app()->setLocale($language);
+
         $coupons= $user->coupons();
         if($request->filled("type")){
             $type = $request->type;

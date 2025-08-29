@@ -9,6 +9,8 @@ use App\Models\Image;
 use App\Models\RegisterImage;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+
 
 class LogoController extends Controller
 {
@@ -25,7 +27,10 @@ class LogoController extends Controller
 
     public function favicon() : JsonResponse
     {
-        $favicon = Image::query()->where('type','favicon')->first();
+        $favicon = Cache::remember('favicon_image', 3600, function () {
+            return Image::query()->where('type', 'favicon')->first();
+        });
+        
         return response()->json(new ImageResource($favicon));
     }
 

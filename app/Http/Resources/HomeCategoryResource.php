@@ -17,7 +17,7 @@ class HomeCategoryResource extends JsonResource
         return [
             'id' => $this->id,
             'title' =>  $this->title,
-            'products' => HomeProductResource::collection($this->products),
+            'products' => HomeProductResource::collection($this->products->with('translations')),
         ];
     }
 }

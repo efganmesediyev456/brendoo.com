@@ -37,23 +37,6 @@ class HomeProductResource extends JsonResource
             'discounted_price' => $this->discounted_price,
             'image' =>  $this->image,
             'collection_id' => $request->collection_id
-//            'filters' => $this->options
-//                ->groupBy('pivot.filter_id')
-//                ->map(function ($options, $filterId) {
-//                    $filterName = Filter::find($filterId)->title;
-//                    return [
-//                        'filter_id' => $filterId,
-//                        'filter_name' => $filterName,
-//                        'options' => $options->map(function ($option) {
-//                            return [
-//                                'option_id' => $option->id,
-//                                'name' => $option->title,
-//                                'is_default' => $option->pivot->is_default,
-//                                'color_code' => $option->color_code
-//                            ];
-//                        })->toArray(),
-//                    ];
-//                })->values()->toArray(),
         ];
     }
 }

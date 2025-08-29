@@ -22,4 +22,6 @@ class MobileBanner extends Model
     protected $casts = [
         'filter_conditions' => 'array'
     ];
+
+   
 }

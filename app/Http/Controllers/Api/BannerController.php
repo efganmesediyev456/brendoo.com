@@ -9,12 +9,19 @@ use App\Models\Banner;
 use App\Models\MobileBanner;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+
 
 class BannerController extends Controller
 {
     public function index() : JsonResponse
     {
-        $banners = Banner::query()->active()->get();
+        $locale = app()->getLocale();
+
+        $banners = Cache::remember("banners.active.{$locale}", 60 * 60, function () {
+            return Banner::query()->active()->get();
+        });
+
         return response()->json(BannerResource::collection($banners));
     }
 

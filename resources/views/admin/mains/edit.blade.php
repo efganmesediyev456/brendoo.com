@@ -38,6 +38,13 @@
                                     @if($errors->first('ru_description')) <small class="form-text text-danger">{{$errors->first('ru_description')}}</small> @endif
                                 </div>
 
+
+                                <div class="mb-3">
+                                    <label class="col-form-label">Url</label>
+                                    <textarea class="form-control" type="text" name="url">{{$main->url}}</textarea>
+                                    @if($errors->first('url')) <small class="form-text text-danger">{{$errors->first('url')}}</small> @endif
+                                </div>
+
                                 <div class="mb-3">
                                     <video style="width: 350px; height: 200px;" class="uploaded_video" controls>
                                         <source src="{{asset('storage/' . $main->image)}}" type="video/mp4">

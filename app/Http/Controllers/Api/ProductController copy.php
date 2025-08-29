@@ -194,53 +194,62 @@ class ProductController extends Controller
         $filters = collect([]);
 
         if (!$request->has('search')) {
-            $query->with(['sliders', 'brand', 'translations']);
+            $query->with(['filters.options', 'category', 'sub_category', 'sliders', 'brand', 'translations']);
         }
 
         if ($request->filled('category_id')) {
             $query->where('category_id', $request->category_id);
+            $id = $request->category_id;
+            $locale = app()->getLocale();
+            $ttl = 60 * 60; // 1 saat
+            $key = "cat:{$id}:filters:{$locale}:v1";
+
+            // $payload = Cache::remember($key, $ttl, function () use ($id) {
+            $payload=    $category = Category::query()
+                    ->select('id', 'image') // lazım olan sütunlar
+                    ->with([
+                        // SubCategories və üçüncü səviyyə
+                        'subCategories:id,category_id',
+                        'subCategories.third_categories:id,sub_category_id',
+
+                        // Yalnız bu kateqoriyada istifadə olunan option-ları olan filterlər
+                        'filters' => function ($q) use ($id) {
+                            $q->whereExists(function ($sub) use ($id) {
+                                $sub->select(DB::raw(1))
+                                    ->from('options')
+                                    ->join('product_filter_options', 'product_filter_options.option_id', '=', 'options.id')
+                                    ->join('products', 'products.id', '=', 'product_filter_options.product_id')
+                                    // exists-i filters cədvəlinə bağlayırıq
+                                    ->whereColumn('options.filter_id', 'filters.id')
+                                    ->where('products.category_id', $id)
+                                    ->where('products.is_active', true)
+                                    ->where('options.is_active', true);
+                            })
+                                ->with([
+                                    'options' => function ($oq) use ($id) {
+                                        $oq->select('options.id', 'options.filter_id', 'options.color_code')
+                                            ->where('options.is_active', true)
+                                            ->whereExists(function ($sub) use ($id) {
+                                                $sub->select(DB::raw(1))
+                                                    ->from('product_filter_options')
+                                                    ->join('products', 'products.id', '=', 'product_filter_options.product_id')
+                                                    ->whereColumn('product_filter_options.option_id', 'options.id')
+                                                    ->where('products.category_id', $id)
+                                                    ->where('products.is_active', true);
+                                            })
+                                            ->orderBy('options.id');
+                                    }
+                                ]);
+                        },
+                    ])
+                    ->findOrFail($id);
+
+                $category = (new CategoryFilterResource($category))->resolve();
+            // });
+
+            $filters = $payload['filters'];
+
         }
-    // $id = $request->category_id;
-    // $locale = app()->getLocale();
-    // $ttl = 60 * 60; // 1 saat
-    // $key = "cat:{$id}:filters:{$locale}:v2";
-
-    // $payload = Cache::remember($key, $ttl, function () use ($id) {
-    //     $category = Category::query()
-    //         ->select('id', 'image')
-    //         ->with([
-    //             // Alt kateqoriyalar
-    //             'subCategories:id,category_id',
-    //             'subCategories.third_categories:id,sub_category_id',
-
-    //             // Filterlər yalnız bu category-də istifadə olunan options ilə
-    //             'filters' => function ($q) use ($id) {
-    //                 $q->whereHas('options.products', function ($p) use ($id) {
-    //                     $p->where('products.category_id', $id)
-    //                       ->where('products.is_active', true);
-    //                 })
-    //                 ->with([
-    //                     'options' => function ($oq) use ($id) {
-    //                         $oq->select('options.id', 'options.filter_id', 'options.color_code')
-    //                             ->where('options.is_active', true)
-    //                             ->whereHas('products', function ($p) use ($id) {
-    //                                 $p->where('products.category_id', $id)
-    //                                   ->where('products.is_active', true);
-    //                             })
-    //                             ->orderBy('options.id');
-    //                     }
-    //                 ]);
-    //             },
-    //         ])
-    //         ->findOrFail($id);
-
-
-    //     return (new CategoryFilterResource($category))->resolve();
-    // });
-
-    //         $filters = $payload['filters'];
-    //     }
-
 
         if ($request->filled('sub_category_id')) {
             $query->where('sub_category_id', $request->sub_category_id);
@@ -289,14 +298,11 @@ class ProductController extends Controller
         }
 
         if ($optionIds = $request->option_ids) {
-            // $query->whereExists(function ($q) use ($optionIds) {
-            //     $q->select(DB::raw(1))
-            //         ->from('option_product')
-            //         ->whereColumn('option_product.product_id', 'products.id')
-            //         ->whereIn('option_product.option_id', $optionIds);
-            // });
-            $query->whereHas('options', function ($query) use ($optionIds) {
-                $query->whereIn('options.id', $optionIds);
+            $query->whereExists(function ($q) use ($optionIds) {
+                $q->select(DB::raw(1))
+                    ->from('option_product')
+                    ->whereColumn('option_product.product_id', 'products.id')
+                    ->whereIn('option_product.option_id', $optionIds);
             });
         }
 

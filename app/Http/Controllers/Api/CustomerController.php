@@ -313,11 +313,11 @@ class CustomerController extends Controller
 
             $customer = Customer::query()->where('email', $request->email)->first();
 
-            if(!$customer->email_verified_at){
-                return response()->json([
-                    'errors' => 'Emailinizi təsdiqləyin'
-                ], 422);
-            }
+            // if(!$customer->email_verified_at){
+            //     return response()->json([
+            //         'errors' => 'Emailinizi təsdiqləyin'
+            //     ], 422);
+            // }
 
             $resetToken = Str::random(60);
 
@@ -355,7 +355,7 @@ class CustomerController extends Controller
 
         $customer = Customer::query()->where('password_reset_token', $request->reset_token)->first();
 
-        
+
         if (is_null($customer)) {
             return response()->json(['message' => 'Invalid reset token'], 400);
         }

@@ -18,7 +18,7 @@ class TiktokResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'image' => $base_url . '/storage/' . $this->image,
+            'image' => $this->url ? $this->url : $base_url . '/storage/' . $this->image,
             'products' => SocialProductResource::collection($this->products)
         ];
     }

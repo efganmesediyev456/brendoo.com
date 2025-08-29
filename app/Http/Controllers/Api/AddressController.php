@@ -28,17 +28,18 @@ class AddressController extends Controller
             'city_id' => 'nullable',
         ]);
 
+
         $customer = Customer::query()->findOrFail(auth()->user()->id);
 
-        $address = $customer->address()->updateOrCreate(
-            [],
-            [
-                'address' => $request->address,
-                'additional_info' => $request->additional_info,
-                'region_id' => $request->region_id,
-                'city_id' => $request->city_id,
-            ]
-        );
+        $customer->address()->delete();
+
+        $address = $customer->address()->create([
+            'address' => $request->address,
+            'additional_info' => $request->additional_info,
+            'region_id' => $request->region_id,
+            'city_id' => $request->city_id,
+        ]);
+
 
         return response()->json(new AddressResource($address));
 

@@ -174,9 +174,11 @@ class PaymentController extends Controller
 
         DB::beginTransaction();
 
+
         try {
             $response = $this->paymentService->checkPaymentStatus($request->operation_id);
             $status = $response['Data']['Operation'][0]['status'];
+
 
             $payment = Payment::query()->where('operation_id', $request->operation_id)->first();
             $payment->update([
@@ -264,8 +266,9 @@ class PaymentController extends Controller
                             }else{
                                 $demandPaymentOrderPrice = round($orderItem->price, 2);
                             }
-                            $pr = round($demandPaymentOrderPrice*$collection->earn_price/100, 2);
+                            $pr = round($demandPaymentOrderPrice * $collection->earn_price / 100, 2, PHP_ROUND_HALF_UP);
 
+                        
                             DemandPaymentBalanceOrder::create([
                                 'demand_payment_balance_id' => $existing->id,
                                 'order_item_id' => $orderItem->id,

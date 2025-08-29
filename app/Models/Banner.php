@@ -7,6 +7,7 @@ use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Cache;
 
 class Banner extends Model
 {
@@ -22,4 +23,17 @@ class Banner extends Model
     protected $casts = [
         'filter_conditions' => 'array'
     ];
+
+
+        protected static function booted()
+    {
+        static::saved(function ($brand) {
+            Cache::flush();
+        });
+
+        static::deleted(function ($brand) {
+            Cache::flush();
+        });
+    }
+    
 }

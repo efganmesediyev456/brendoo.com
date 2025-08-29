@@ -22,11 +22,9 @@ class InfluencerRegisterService
         $influencer = Influencer::where('email', $data['email'])->where('is_active', 1)->first();
 
         if ($influencer) {
-            // Artıq qeydiyyatdan keçmiş aktiv istifadəçi varsa, exception ata
             throw new \Exception('Bu email ilə aktiv hesab artıq mövcuddur.');
         }
 
-        // Əgər is_active != 1 olan varsa, onu götür və update et
         $influencer = Influencer::where('email', $data['email'])->first();
 
         if ($influencer) {
@@ -56,7 +54,7 @@ class InfluencerRegisterService
         }
 
         // Mail göndər
-        Mail::to($data['email'])->send(new VerificationCodeMail($verificationCode));
+        // Mail::to($data['email'])->send(new VerificationCodeMail($verificationCode));
 
         return [
             'influencer' => $influencer,

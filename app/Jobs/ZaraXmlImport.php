@@ -84,6 +84,25 @@ class ZaraXmlImport implements ShouldQueue
             }
             $images = $product['Resimler'] ?? [];
 
+            $imageMain = $images['AnaResim'] ?? null;
+
+
+
+
+            if (empty($imageMain) && !empty($images)) {
+                $allImages = collect($images)->toArray()['DigerResim'] ?? [];
+                $firstImage = collect($allImages)
+                    ->filter(fn($url) => is_string($url))
+                    ->first();
+                $imageMain = $firstImage ?: null;
+            }
+
+
+           
+
+
+
+
             $new_product = Product::create([
                 'user_id'    => $this->user_id,
                 'listing_id' => array_key_exists('id',$product) ? $product['id'] : null,
@@ -92,7 +111,7 @@ class ZaraXmlImport implements ShouldQueue
                     $calculatorService::parsePrice($product['Fiyat'] ?? 0)
                 ),
                 'tr_price'          => $calculatorService::parsePrice($product['Fiyat'] ?? 0),
-                'image'             => $images['AnaResim'] ?? null,
+                'image'             => $imageMain ?? null,
                 'category_id'       => $this->category_id,
                 'sub_category_id'   => $this->sub_category_id,
                 'third_category_id' => $this->third_category_id,

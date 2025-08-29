@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
 
 class Product extends Model
 {
@@ -144,6 +145,17 @@ class Product extends Model
             $product->code = 'PRD-' . str_pad($product->id, 6, '0', STR_PAD_LEFT);
             $product->save();
         });
+
+
+        static::saved(function ($brand) {
+            Cache::flush();
+        });
+
+        static::deleted(function ($brand) {
+            Cache::flush();
+        });
+    
+
     }
 
     public function user()

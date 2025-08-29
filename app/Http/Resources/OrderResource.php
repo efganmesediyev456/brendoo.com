@@ -44,14 +44,12 @@ class OrderResource extends JsonResource
         $isCancelStatus= $this->order_items()->first()?->lastStatus?->status?->id==$isCancel->id;
 
         
-       
-
-      
-
         return [
             'id' => $this->id,
             'order_number' => $this->order_number,
             // 'status' => $this->status,
+            'regionId' => $this->regionId,
+            'cityId' => $this->cityId,
             'is_deliver' => $this->is_deliver,
             'shop' => $this->shop,
             'payment_type' => $this->payment_type,

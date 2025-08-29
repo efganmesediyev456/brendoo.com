@@ -23,7 +23,7 @@ class NewSampleNotification extends Notification
     public function toExpoNotification($notifiable)
     {
         return (new ExpoMessage())
-            ->to([$notifiable->expo_token]) 
+            ->to([$notifiable->expo_token])
             ->title($this->title)
             ->body($this->body)
             ->channelId('ATMQ4pAAZLkE3_Mg-lU6H3roN-QxNq6xh-lO6N4g');

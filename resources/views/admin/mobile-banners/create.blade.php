@@ -120,13 +120,13 @@
                                     @endif
                                 </div>
 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label class="col-form-label">Logo</label>
                                     <input class="form-control" type="file" name="logo">
                                     @if($errors->first('logo'))
                                         <small class="form-text text-danger">{{ $errors->first('logo') }}</small>
                                     @endif
-                                </div>
+                                </div> --}}
 
 
                                 <div class="mb-3">

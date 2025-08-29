@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class SliderResource extends JsonResource
+class CategoryFilterResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,9 +14,13 @@ class SliderResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        $base_url = url('/');
         return [
             'id' => $this->id,
-            'image' => $this->image,
+            'title' =>  $this->title,
+            'image' => $base_url . '/storage/' . $this->image,
+            'subCategories' => SubCategoryResource::collection($this->subCategories),
+            'filters' => FilterResource::collection($this->filters)
         ];
     }
 }

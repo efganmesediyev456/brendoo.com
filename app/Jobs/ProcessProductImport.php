@@ -61,79 +61,111 @@ class ProcessProductImport implements ShouldQueue
         return $slug;
     }
 
+    // public function handle(): void
+    // {
+    //     $fullPath = storage_path('app/' . $this->filePath);
+
+    //     if ( ! file_exists($fullPath)) {
+    //         Log::error('XML faylı tapılmadı: ' . $fullPath);
+
+    //         return;
+    //     }
+
+    //     $calculatorService = new PriceCalculatorService();
+    //     $xmlContent        = file_get_contents($fullPath);
+    //     $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+    //     $json              = json_decode(json_encode($xml), true);
+    //     $products          = $json['Product'] ?? [];
+
+    //     foreach ($products as $product) {
+    //         if (Product::query()->where('listing_id', $product['id'])->exists()) {
+    //             continue;
+    //         }
+
+    //         $images = $product['images'] ?? [];
+
+    //         $image = $images['image'] ?? null;
+    //         if (is_array($image)) {
+    //             $image = $image[0];
+    //         }
+
+    //         $new_product = Product::create([
+    //             'user_id'           => $this->user_id,
+    //             'listing_id'        => $product['id'],
+    //             'url'               => $product['url'],
+    //             'price'             => $calculatorService::calculate($product['price']['sellingPrice'] ?? 0),
+    //             'tr_price'          => $product['price']['sellingPrice']    ?? 0,
+    //             'discounted_price'  => $product['price']['discountedPrice'] ?? 0,
+    //             'image'             => $image,
+    //             'category_id'       => $this->category_id,
+    //             'sub_category_id'   => $this->sub_category_id,
+    //             'third_category_id' => $this->third_category_id,
+    //             'brand_id'          => $this->brand_id,
+    //             'is_active'         => false,
+    //             'en'                => [
+    //                 'title'     => $product['name'],
+    //                 'img_alt'   => $product['imageAlt'] ?? '',
+    //                 'img_title' => $product['imageAlt'] ?? '',
+    //                 'slug'      => $this->generateUniqueSlug($product['name']) . '-en',
+    //             ],
+    //             'ru' => [
+    //                 'locale'    => 'ru',
+    //                 'title'     => $product['name'],
+    //                 'img_alt'   => $product['imageAlt'] ?? '',
+    //                 'img_title' => $product['imageAlt'] ?? '',
+    //                 'slug'      => $this->generateUniqueSlug($product['name']) . '-ru',
+    //             ],
+    //         ]);
+
+    //         if (is_array($images) && isset($images['image'])) {
+    //             $imageList = $images['image'];
+
+    //             if (is_string($imageList)) {
+    //                 $imageList = [$imageList];
+    //             }
+
+    //             foreach ($imageList as $img) {
+    //                 $new_product->sliders()->create([
+    //                     'image' => $img,
+    //                 ]);
+    //             }
+    //         }
+    //     }
+
+
+    //     // İsteğe bağlı: faylı sil
+    //     unlink($fullPath);
+    // }
+
+
+
     public function handle(): void
     {
         $fullPath = storage_path('app/' . $this->filePath);
 
-        if ( ! file_exists($fullPath)) {
-            Log::error('XML faylı tapılmadı: ' . $fullPath);
-
+        if (!file_exists($fullPath)) {
+            \Log::error('XML faylı tapılmadı: ' . $fullPath);
             return;
         }
 
-        $calculatorService = new PriceCalculatorService();
-        $xmlContent        = file_get_contents($fullPath);
-        $xml               = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
-        $json              = json_decode(json_encode($xml), true);
-        $products          = $json['Product'] ?? [];
+        $xmlContent = file_get_contents($fullPath);
+        $xml        = simplexml_load_string($xmlContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+        $json       = json_decode(json_encode($xml), true);
+        $products   = $json['Product'] ?? [];
 
         foreach ($products as $product) {
-            if (Product::query()->where('listing_id', $product['id'])->exists()) {
-                continue;
-            }
-
-            $images = $product['images'] ?? [];
-
-            $image = $images['image'] ?? null;
-            if (is_array($image)) {
-                $image = $image[0];
-            }
-
-            $new_product = Product::create([
-                'user_id'           => $this->user_id,
-                'listing_id'        => $product['id'],
-                'url'               => $product['url'],
-                'price'             => $calculatorService::calculate($product['price']['sellingPrice'] ?? 0),
-                'tr_price'          => $product['price']['sellingPrice']    ?? 0,
-                'discounted_price'  => $product['price']['discountedPrice'] ?? 0,
-                'image'             => $image,
-                'category_id'       => $this->category_id,
-                'sub_category_id'   => $this->sub_category_id,
-                'third_category_id' => $this->third_category_id,
-                'brand_id'          => $this->brand_id,
-                'is_active'         => false,
-                'en'                => [
-                    'title'     => $product['name'],
-                    'img_alt'   => $product['imageAlt'] ?? '',
-                    'img_title' => $product['imageAlt'] ?? '',
-                    'slug'      => $this->generateUniqueSlug($product['name']) . '-en',
-                ],
-                'ru' => [
-                    'locale'    => 'ru',
-                    'title'     => $product['name'],
-                    'img_alt'   => $product['imageAlt'] ?? '',
-                    'img_title' => $product['imageAlt'] ?? '',
-                    'slug'      => $this->generateUniqueSlug($product['name']) . '-ru',
-                ],
-            ]);
-
-            if (is_array($images) && isset($images['image'])) {
-                $imageList = $images['image'];
-
-                if (is_string($imageList)) {
-                    $imageList = [$imageList];
-                }
-
-                foreach ($imageList as $img) {
-                    $new_product->sliders()->create([
-                        'image' => $img,
-                    ]);
-                }
-            }
+            ProcessSingleProduct::dispatch(
+                $product,
+                $this->category_id,
+                $this->sub_category_id,
+                $this->third_category_id,
+                $this->brand_id,
+                $this->user_id
+            );
         }
 
-
-        // İsteğe bağlı: faylı sil
+        // Faylı silmək istəyirsənsə
         unlink($fullPath);
     }
+
 }
